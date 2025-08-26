@@ -21,8 +21,12 @@ export const Calculator = () => {
     }
   }
 
-  const onChange = (newNumber: string | number) => {
+  const onAddNumber = (newNumber: string | number) => {
     setCurrentNumber(`${currentNumber}${newNumber}`);
+  }
+
+  const onChange = (newNumber: string | number) => {
+    setCurrentNumber(`${newNumber}`);
   }
 
   const calc = () => {
