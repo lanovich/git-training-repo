@@ -46,6 +46,14 @@ export const Calculator = () => {
       }}
     >
       <Layout.Content>
+        <Badge.Ribbon
+          style={{
+            position: "absolute",
+            zIndex: 100,
+          }}
+          color={"green"}
+          text={`= ${calc()}`}
+        />
         <Row
           style={{ paddingInline: "20px", borderBottom: "1px solid #3c3c3cff" }}
         >
@@ -53,15 +61,6 @@ export const Calculator = () => {
             <h1 style={{ color: "white", fontWeight: "normal" }}>
               Калькулятор
             </h1>
-          </Col>
-          <Col>
-            <Typography>
-              <Badge.Ribbon
-                style={{ zIndex: 100 }}
-                color={"green"}
-                text={`= ${calc()}`}
-              />
-            </Typography>
           </Col>
         </Row>
         <Row gutter={[0, 8]} style={{ padding: "10px 20px" }}>
