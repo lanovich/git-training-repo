@@ -39,7 +39,7 @@ export const Calculator = () => {
     <Layout
       style={{
         maxWidth: "550px",
-        margin: "0 auto",
+        margin: "10px auto",
         backgroundColor: "#17161eff",
         border: "1px solid #3c3c3cff",
         borderRadius: "10px",
