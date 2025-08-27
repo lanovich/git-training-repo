@@ -50,7 +50,7 @@ export const Calculator = () => {
         <Row gutter={[0, 8]}>
           <Col span={20}>
             <Typography style={{ borderBottom: "1px solid white" }}>
-              <p>{historyList.join(" ")}</p>
+              <p>{historyList.join(" ") || 0}</p>
             </Typography>
           </Col>
           <Col span={4}>
