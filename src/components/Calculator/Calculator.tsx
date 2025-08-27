@@ -40,12 +40,16 @@ export const Calculator = () => {
       style={{
         maxWidth: "550px",
         margin: "0 auto",
+        padding: "30px",
+        backgroundColor: "#17161eff",
+        border: "1px solid #3c3c3cff",
+        borderRadius: "10px",
       }}
     >
       <Layout.Content>
         <Row gutter={[0, 8]}>
           <Col span={20}>
-            <Typography>
+            <Typography style={{ borderBottom: "1px solid white" }}>
               <p>{historyList.join(" ")}</p>
             </Typography>
           </Col>
@@ -60,6 +64,7 @@ export const Calculator = () => {
           </Col>
           <Col span={24}>
             <Input
+              style={{backgroundColor: "inherit"}}
               size={"large"}
               value={currentNumber}
               onChange={(e) => onChange(e.currentTarget.value)}
@@ -71,6 +76,7 @@ export const Calculator = () => {
                 <Col span={7} key={n}>
                   <Button
                     onClick={() => onAddNumber(n)}
+                    style={{backgroundColor: "inherit"}}
                     shape={"circle"}
                     size={"large"}
                   >
@@ -86,6 +92,7 @@ export const Calculator = () => {
                 <Col span={24} key={n}>
                   <Button
                     onClick={() => doAction(n)}
+                    style={{backgroundColor: "inherit"}}
                     shape={"circle"}
                     size={"large"}
                   >
