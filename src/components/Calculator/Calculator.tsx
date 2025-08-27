@@ -40,20 +40,21 @@ export const Calculator = () => {
       style={{
         maxWidth: "550px",
         margin: "0 auto",
-        padding: "30px",
         backgroundColor: "#17161eff",
         border: "1px solid #3c3c3cff",
         borderRadius: "10px",
       }}
     >
       <Layout.Content>
-        <Row gutter={[0, 8]}>
-          <Col span={20}>
-            <Typography style={{ borderBottom: "1px solid white" }}>
-              <p>{historyList.join(" ") || 0}</p>
-            </Typography>
+        <Row
+          style={{ paddingInline: "20px", borderBottom: "1px solid #3c3c3cff" }}
+        >
+          <Col span={24}>
+            <h1 style={{ color: "white", fontWeight: "normal" }}>
+              Калькулятор
+            </h1>
           </Col>
-          <Col span={4}>
+          <Col>
             <Typography>
               <Badge.Ribbon
                 style={{ zIndex: 100 }}
@@ -62,9 +63,18 @@ export const Calculator = () => {
               />
             </Typography>
           </Col>
+        </Row>
+        <Row gutter={[0, 8]} style={{ padding: "10px 20px" }}>
+          <Col span={24}>
+            <Typography
+              style={{ borderBottom: "1px solid white", marginBottom: "10px" }}
+            >
+              <p>{historyList.join(" ") || 0}</p>
+            </Typography>
+          </Col>
           <Col span={24}>
             <Input
-              style={{backgroundColor: "inherit"}}
+              style={{ backgroundColor: "inherit" }}
               size={"large"}
               value={currentNumber}
               onChange={(e) => onChange(e.currentTarget.value)}
@@ -76,7 +86,7 @@ export const Calculator = () => {
                 <Col span={7} key={n}>
                   <Button
                     onClick={() => onAddNumber(n)}
-                    style={{backgroundColor: "inherit"}}
+                    style={{ backgroundColor: "inherit" }}
                     shape={"circle"}
                     size={"large"}
                   >
@@ -92,7 +102,7 @@ export const Calculator = () => {
                 <Col span={24} key={n}>
                   <Button
                     onClick={() => doAction(n)}
-                    style={{backgroundColor: "inherit"}}
+                    style={{ backgroundColor: "inherit" }}
                     shape={"circle"}
                     size={"large"}
                   >
